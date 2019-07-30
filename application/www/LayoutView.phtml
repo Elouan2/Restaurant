@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>3WA Restaurant</title>
     <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize-3.0.3.min.css">
-    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
 
     <!-- Feuilles de styles de l'application -->
     <link rel="stylesheet" href="<?= $wwwUrl ?>/css/3wa-resto.css">
@@ -13,6 +17,7 @@
     <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-form.css">
     <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-table.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Karla">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
 
     <!-- Librairie jQuery -->
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
@@ -20,14 +25,12 @@
     <!-- JavaScript de l'application -->
     <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
 </head>
-<body>
+<body class="<?= $bodyClass ?>">
 
 <!-- En-tête commune -->
 <header>
     <h1>
-        <a href="<?= $requestUrl ?>">
-            <img src="<?= $wwwUrl ?>/images/logo.gif" height="63" width="57" alt="3WA Restaurant">Restaurant - Made In America !
-        </a>
+        <a href="<?= $requestUrl ?>"></a>
     </h1>
 </header>
 

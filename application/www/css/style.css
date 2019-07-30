@@ -1,0 +1,61 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*html{
+    font-size: 62.5%;
+}*/
+.home {
+  text-align: center;
+  text-decoration: none;
+  background-color: black;
+}
+
+.home header {
+  background-color: black;
+}
+
+.home header #haut {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  /* vaut mieux fixer les valeurs par défaut pour ne pas avoir de mauvaises surprises */
+  left: 0;
+  right: 0;
+}
+
+.home header #haut img {
+  width: 200px;
+  padding: 20px;
+}
+
+.home header #haut nav {
+  background-color: tomato;
+  padding: 15px;
+}
+
+.home header #haut nav a {
+  font-size: 20px;
+  margin-left: 50px;
+  text-decoration: none;
+  color: white;
+  background-color: tomato;
+  padding: 15px;
+  font-family: 'Lacquer', sans-serif;
+}
+
+.home header #haut nav a i {
+  vertical-align: middle;
+  padding-right: 2px;
+}
+
+.home main section.banner {
+  background-image: url(../images/HotPizza/bannière.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 900px;
+}
+/*# sourceMappingURL=style.css.map */

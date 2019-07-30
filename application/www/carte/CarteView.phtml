@@ -16,22 +16,44 @@
 
 
         <link rel="stylesheet" href="css/style.css"><div id="haut">
-	</head>
+	</head>-->
     
     
-    <body>
-        <header id="header" class="bg-light"-->
-        <div class="container">
-                <nav>
-                    <a href="#"><img src="/images/HotPizza/logo.jpg" alt="logo"></a>    
-                    <a href="#">A la Carte</a>
-                    <a href=""><i class="fas fa-map-marked-alt"></i>Trouver votre pizzeria !</a>
-                    <a href="#">A emporter</a>
-                    <a href="#">Livraison</a>
-                    <a href="#"><i class="fas fa-comments"></i>Nous contacter</a>
-                    <a href="#"><i class="fas fa-user-plus"></i> S'inscrire</a>
-                </nav>
-            </div>
+    <body class="carte"> 
+        <header class="carte">
+            
+        
+            <nav role="navigation">
+                <div id="menuToggle">
+                <!--
+                A fake / hidden checkbox is used as click reciever,
+                so you can use the :checked selector on it.
+                -->
+                    <input type="checkbox" />
+                
+                <!--
+                Some spans to act as a hamburger.
+                
+                They are acting like a real hamburger,
+                not that McDonalds stuff.
+                -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                
+                <!--
+                Too bad the menu has to be inside of the button
+                but hey, it's pure CSS magic.
+                -->
+                    <ul id="menu">
+                        <a href="#"><li>Accueil</li></a>
+                        <a href="#"><li>A Emporter</li></a>
+                        <a href="#"><li>Livraison</li></a>
+                        <a href="#"><li>Nous contacter</li></a>
+                    
+                    </ul>
+                </div>
+            </nav>
         </header>
         <main>
             <section class="home">
@@ -88,16 +110,23 @@
 						        <div class="sous-menu">
 							        <h2>Non Gazeuses</h2>
                                     <ul>
-                                        <li><a href="#">Eau </a></li>
-                                        <li><a href="#">Brownie</a></li>
-                                        <li><a href="#">Mousse au Chocolat</a></li>
+                                        <li><a href="#">Vittel 33cl</a></li>
+                                        <li><a href="#">Vittel 1L5</a></li>
+                                        <li><a href="#">Ice Tea pêche 33cl</a></li>
+                                        <li><a href="#">Ice Tea pêche 1L5</a></li>
+                                        <li><a href="#">Oasis tropical 33cl</a></li>
                                     </ul>
                                 </div>
 						        <div class="sous-menu">
-							    <h2>Fruits du potager !</h2>
+							    <h2>Gazeuses</h2>
 							        <ul>
-								        <li><a href="#">Duo de fruits</a></li>
-                                        <li><a href="#">Fromage blanc Framboise</a></li>
+								        <li><a href="#">Perrier 50cl</a></li>
+                                        <li><a href="#">Pepsi 33cl</a></li>
+                                        <li><a href="#">Pepsi 1L5</a></li>
+                                        <li><a href="#">Pepsi Max 33cl</a></li>
+                                        <li><a href="#">Pepsi Max 1L5</a></li>
+                                        <li><a href="#">Orangina 33cl</a></li>
+                                        <li><a href="#">7up 33cl</a></li>
 							        </ul>
 						            </div>
                                 
