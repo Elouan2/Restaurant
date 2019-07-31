@@ -12,16 +12,16 @@ class UserSession
 		}
 	}
 
-    public function create($userId, $firstName, $lastName, $email, $admin)
+    public function create($id, $firstName, $lastName, $mail, $role)
     {
         // Construction de la session utilisateur.
         $_SESSION['user'] =
         [
-            'UserId'    => $userId,
-            'FirstName' => $firstName,
-            'LastName'  => $lastName,
-            'Email'     => $email,
-            'Admin'     => $admin
+            'id' => $id,
+            'firstName' => $firstName,
+            'lastName'  => $lastName,
+            'mail'     => $mail,
+            'role'     => $role
         ];
     }
 
@@ -37,7 +37,7 @@ class UserSession
         if($this->isAuthenticated() == false) {
             return null;
         }
-        return $_SESSION['user']['Email'];
+        return $_SESSION['user']['mail'];
     }
 
     public function getAdmin()
@@ -45,7 +45,7 @@ class UserSession
         if($this->isAuthenticated() == false) {
             return null;
         }
-        return $_SESSION['user']['Admin'];
+        return $_SESSION['user']['role'];
     }
 
 
@@ -54,7 +54,7 @@ class UserSession
         {
             return null;
         }
-        return $_SESSION['user']['FirstName'];
+        return $_SESSION['user']['firstName'];
     }
 
 
@@ -63,7 +63,7 @@ class UserSession
         {
             return null;
         }
-        return $_SESSION['user']['FirstName'].' '.$_SESSION['user']['LastName'];
+        return $_SESSION['user']['firstName'].' '.$_SESSION['user']['lastName'];
     }
 
 
@@ -72,7 +72,7 @@ class UserSession
         {
             return null;
         }
-        return $_SESSION['user']['LastName'];
+        return $_SESSION['user']['lastName'];
     }
 
 
@@ -81,7 +81,7 @@ class UserSession
         {
             return null;
         }
-        return $_SESSION['user']['UserId'];
+        return $_SESSION['user']['id'];
     }
 
 
