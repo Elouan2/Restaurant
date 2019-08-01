@@ -5,66 +5,13 @@
     font-size: 62.5%;
 }*/
 
-.home{
-    text-align: center;
-    text-decoration: none;
-    background-color:black;
 
-  header{
-    background-color:black;
-
-    #haut{
-      background-color:black;
-      position:fixed;
-      top: 0; /* vaut mieux fixer les valeurs par défaut pour ne pas avoir de mauvaises surprises */
-      left: 0;
-      right: 0;
-
-      img{
-        width:200px;
-        padding: 20px;
-        }
-
-      nav{
-        background-color: tomato;
-        padding:15px;
-        
-        a{
-          font-size: 20px;
-          margin-left: 50px;
-          text-decoration: none;
-          color: white;
-          background-color: tomato;
-          padding: 15px;
-          font-family: 'Lacquer', sans-serif;
-          &:hover{
-            color: tomato;
-            background-color: aliceblue;
-          }
-        }
-        #livraison{
-          background-color: white;
-          color: tomato;
-          border:2px solid black;
-          padding: 15px;
-        &:hover{
-        background-color: white;
-        color: tomato;
-        }
-      
-          i{
-            vertical-align: middle;
-            padding-right: 2px;
-          }
-          svg{
-            width:30px; 
-            vertical-align: middle;
-          }
-        }
-      }
-    }
-  main{
-    
+body.home{
+  text-align: center;
+  text-decoration: none;
+  background-color:black;
+  
+  main{ 
     section.banner{
       background-image: url(../images/HotPizza/bannière.jpg);
       background-repeat: no-repeat;
@@ -100,8 +47,6 @@
           margin: 0 auto;
           max-width: 1100px;
           padding:30px;
-          
-          
         }
       }
       h1, h2, h3{
@@ -112,36 +57,62 @@
         padding: 20px;
         border: 2px solid tomato;
         background-color: tomato;
-        
-        
-      }
+        }
+
       h2.avec{
+
         background-color: black;
+
         width:100%;
+
         border: none;
+
         
+
       }
+
       i{
+
         color: tomato;
+
         font-size: 60px;
+
         border: 3px solid tomato;
+
         border-radius:50%;
+
         padding: 20px;
+
         margin: 30px;
+
+      }
+
     }
-    }
+
   }
+
 }
 
 
-.register{
+
+
+body.register{
   background-color: white;
 }
 
 
+body.carte{
+    text-align: center;
+    text-decoration: none;
+    background-color:white;
+  
+  main{
+    margin-top: 215px;;
+  }
+}
 
-
-
+    
+    
 
 
 

@@ -1,0 +1,65 @@
+.carte nav {
+    border-bottom: 4px solid brown;
+    text-align: center;
+    
+}
+
+.carte nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+    text-align: center;
+}
+
+
+.carte nav > ul > li {
+	display: inline-block;
+}
+
+.carte nav > ul > li > a {
+    font-weight: bold;
+    text-decoration: none;
+	padding: 20px 30px;
+	color: tomato;
+	display: inline-block;
+}
+
+.carte nav > ul > li > a:hover {
+	color: white;
+	background-color: tomato;
+}
+
+.carte nav .menu {
+	display: none;
+	position: absolute;
+	background: tomato;
+	left: 0;
+    right: 0;
+}
+
+
+.carte nav ul li:hover .menu {
+	display: block;
+	padding-bottom: 50px;
+}
+
+.carte .sous-menu {
+	width: 30%;
+	display: inline-block;
+    vertical-align: top;
+	padding: 0 2.5%;
+}
+
+.carte .menu a {
+    line-height: 1.8;
+    text-decoration: none;
+    color: brown;
+}
+
+.carte .menu h2 {
+
+color: brown;
+padding: 50px 0 15px ;
+margin: 0;
+font-size: 1.5em;
+}

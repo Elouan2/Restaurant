@@ -1,0 +1,67 @@
+body{
+    text-align: center;
+    text-decoration: none;
+    background-color:black;
+}
+
+header{
+    background-color: black;
+}
+#haut{
+background-color:black;
+position:fixed;
+top: 0; 
+left: 0;
+right: 0;
+}
+header img{
+width:200px;
+padding: 20px;
+}
+header nav{
+background-color: tomato;
+padding:15px;
+}
+
+header nav a{
+font-size: 20px;
+margin-left: 50px;
+text-decoration: none;
+color: white;
+background-color: tomato;
+padding: 15px;
+font-family: 'Lacquer', sans-serif;
+}
+
+header nav a:hover{
+color: tomato;
+background-color: aliceblue;
+}
+
+header nav a i{  
+vertical-align: middle;  
+padding-right: 2px;
+}
+            
+header nav #livraison{
+background-color: white;
+color: tomato;
+border:2px solid black;
+padding: 15px;
+}
+
+header nav #livraison:hover{
+background-color: white;
+color: tomato;
+}
+header svg{
+width:30px; 
+vertical-align: middle;
+}
+
+main{
+    margin-top:226px;
+}
+h1{
+    display:none;
+}
