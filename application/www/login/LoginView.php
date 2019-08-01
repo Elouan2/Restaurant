@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>S'inscrire :</h1>
+        <h1>Connexion</h1>
     </header>
 
     <main>

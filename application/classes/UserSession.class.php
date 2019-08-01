@@ -1,5 +1,4 @@
 <?php
-namespace User;
 
 class UserSession
 {
