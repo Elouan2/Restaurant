@@ -58,4 +58,58 @@
   background-size: cover;
   height: 900px;
 }
+
+.home main section.moyenssect {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  background-color: black;
+  line-height: 1.8;
+  margin-bottom: 200px;
+}
+
+.home main section.moyenssect div {
+  /*display: flex*/
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: white;
+}
+
+.home main section.moyenssect div .container {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 30px;
+}
+
+.home main section.moyenssect div .container article.moyensart {
+  border: 1px solid tomato;
+  line-height: 2.8;
+  width: 20%;
+}
+
+.home main section.moyenssect h1, .home main section.moyenssect h2, .home main section.moyenssect h3, .home main section.moyenssect h4 {
+  border: 2px solid tomato;
+  background-color: tomato;
+  color: white;
+  font-family: 'Lacquer', sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.home main section.moyenssect h2.avec {
+  background-color: black;
+  width: 100%;
+  border: none;
+}
+
+.home main section.moyenssect i {
+  color: tomato;
+  font-size: 60px;
+  border: 3px solid tomato;
+  border-radius: 50%;
+  padding: 20px;
+}
 /*# sourceMappingURL=style.css.map */
