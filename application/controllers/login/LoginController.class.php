@@ -17,16 +17,11 @@ class LoginController
 
     public function httpPostMethod(Http $http, array $formFields)
     {
-        if (password_verify('rasmuslerdorf', $hash)) {
+        if (password_verify('password', $hash)) {
             echo 'Le mot de passe est valide !';
         } else {
-    echo 'Le mot de passe est invalide.';
-}
-
-    //     }
-    //     $parameters_main['password']= $password;
-    //     $parameters_main['password'] = password_verify($password, PASSWORD_DEFAULT);
-    //     $key = $this->db->executeSql($register_main, $parameters_main);
-    //     var_dump($password); die;
-    // }
+            echo 'Le mot de passe est invalide.';
+            // var_dump($password); die;
+        }
+    }
 }

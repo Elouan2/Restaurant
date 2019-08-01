@@ -14,7 +14,6 @@
         $this->db = $database;
     }
 
-
     function findUserByLogin (string $login)
     {
         $parameters['login']= $login;
@@ -22,7 +21,6 @@
         $query= $this->db->queryOne(self::UTILISATEUR, $parameters);
         return $query;
     }
-
 
     function addUser (string $firstName, string $lastName, string $login, string $password, string $mail) {
         $register_main =
