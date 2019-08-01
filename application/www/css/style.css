@@ -46,12 +46,25 @@
   font-family: 'Lacquer', sans-serif;
 }
 
-.home header #haut nav a i {
+.home header #haut nav a:hover {
+  color: tomato;
+  background-color: aliceblue;
+}
+
+.home header #haut nav #livraison {
+  background-color: white;
+  color: tomato;
+  border: 2px solid black;
+  padding: 15px;
+  background-color: white;
+}
+
+.home header #haut nav i {
   vertical-align: middle;
   padding-right: 2px;
 }
 
-.home header #haut nav a svg {
+.home header #haut nav svg {
   width: 30px;
   vertical-align: middle;
 }
@@ -66,6 +79,7 @@
 
 .home main section.moyenssect {
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
   margin-bottom: 30px;
   background-color: black;
   line-height: 1.8;

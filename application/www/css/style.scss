@@ -37,6 +37,20 @@
           background-color: tomato;
           padding: 15px;
           font-family: 'Lacquer', sans-serif;
+          &:hover{
+            color: tomato;
+            background-color: aliceblue;
+          }
+        }
+        #livraison{
+          background-color: white;
+          color: tomato;
+          border:2px solid black;
+          padding: 15px;
+        &:hover{
+        background-color: white;
+        color: tomato;
+        }
       
           i{
             vertical-align: middle;
@@ -49,7 +63,6 @@
         }
       }
     }
-  }
   main{
     
     section.banner{
@@ -61,6 +74,7 @@
     }
     section.moyenssect{
       text-align: center;
+      font-family: 'Roboto Mono', monospace;
       margin-bottom: 30px;
       // padding: 0 20px;
       background-color:black;
