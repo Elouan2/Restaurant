@@ -10,15 +10,15 @@
 .home {
   text-align: center;
   text-decoration: none;
-  background-color: black;
+  background-color: white;
 }
 
 .home header {
-  background-color: black;
+  background-color: white;
 }
 
 .home header #haut {
-  background-color: black;
+  background-color: white;
   position: fixed;
   top: 0;
   /* vaut mieux fixer les valeurs par défaut pour ne pas avoir de mauvaises surprises */

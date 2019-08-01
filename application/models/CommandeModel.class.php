@@ -1,40 +1,44 @@
 <?php
+class CommandeModel {
+    const QUERY_DISPLAYCOMMANDE = 'SELECT *
+    FROM commande
+    WHERE 1';
+    // const QUERY_DISPLAYSINGLECOMMANDE=' SELECT *
+    // FROM user AS U
+    // INNER JOIN commande AS C
+    // ON B.auteur = U.id
+    // LEFT JOIN commentaires AS C
+    // ON B.id = C.lien
+    // WHERE B.id=?';
+    const QUERY_DISPATCHER = ' SELECT *
+    FROM commande AS C
+    inner join user AS U
+    on C.client_id = U.id;
+    WHERE U.role=livreur
+    AND U.statut=true';
 
-class Commande {
-    const displayCommande =
-        'SELECT *, C.`id` AS idCommande
-            FROM `commande` AS C
-            INNER JOIN `user` AS U
-            ON C.`formule` = U.`id`';
     protected $id;
-    protected $titre;
-    protected $author;
-    protected $date;
-    protected $texte;
-    protected $note;
-    protected $link;
-    
-    public function findAll(PDO $db) {
-        $displayBillet = $db->prepare(self::displayCommande);
-        $result = $displayBillet->execute();
-        return $displayBillet->fetchAll();
+    protected $client_id;
+    protected $price;
+    protected $date_order;
+    protected $statut;
+    public function findAll(PDO $dataBase){
+        $query= $dataBase->prepare(QUERY_DISPLAYCOMMANDE);
+        $error = $query->execute();
+        $result = $query -> fetchAll();
+        return $result;
     }
-
-    const displayCommandeSingle =
-        'SELECT *, C.`id` AS idCommande
-            FROM `commande` AS C
-            LEFT JOIN `commentaires` AS C
-            ON B.`id` = C.`link`
-            LEFT JOIN `users` AS U
-            ON B.`author` = U.`id`
-            WHERE B.`id` = ?';
-
-    public function find(PDO $db, int $id) {
-        $displayCommandeSingle = $db->prepare(self::displayCommandeSingle);
-        $result = $displayCommandeSingle->execute([$id]);
-        return $displayCommandeSingle->fetchAll();
+    // public function find(PDO $dataBase, int $id){
+    //     $query= $dataBase->prepare(QUERY_DISPLAYSINGLECOMMANDE);
+    //     $error = $query->execute([$id]);
+    //     $result = $query -> fetchAll();
+    //     return $result;
+    // }
+    public function findAll(PDO $dataBase){
+        $query= $dataBase->prepare(QUERY_DISPATCHER);
+        $error = $query->execute();
+        $result = $query -> fetchAll();
+        return $result;
     }
 }
-
-
 ?>
