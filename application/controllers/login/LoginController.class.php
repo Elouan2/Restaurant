@@ -14,6 +14,7 @@ class LoginController
         $user = $model -> addUser ($formFields['login']);
         $http->redirectTo("/login");
     }
+    
     public function httpPostMethod(Http $http, array $formFields)
     {
         if() {
