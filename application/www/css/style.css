@@ -69,7 +69,9 @@
 }
 
 .home main section.moyenssect div {
-  /*display: flex*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
