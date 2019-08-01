@@ -4,7 +4,7 @@ class HomeController
 {
     public function httpGetMethod(Http $http, array $queryFields)
     {
- 	 return ['bodyClass' => 'home'];
+ 	return ['bodyClass' => 'home'];
     }
 
     public function httpPostMethod(Http $http, array $formFields)

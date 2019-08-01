@@ -5,7 +5,7 @@ class RegisterController
 
     public function httpGetMethod(Http $http, array $queryFields) 
     {
-        return ['bodyClass' => 'home'];
+        return ['bodyClass' => 'register'];
     }
 
     public function httpPostMethod(Http $http, array $formFields)
