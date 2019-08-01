@@ -10,15 +10,15 @@
 .home {
   text-align: center;
   text-decoration: none;
-  background-color: white;
+  background-color: black;
 }
 
 .home header {
-  background-color: white;
+  background-color: black;
 }
 
 .home header #haut {
-  background-color: white;
+  background-color: black;
   position: fixed;
   top: 0;
   /* vaut mieux fixer les valeurs par défaut pour ne pas avoir de mauvaises surprises */
@@ -51,6 +51,11 @@
   padding-right: 2px;
 }
 
+.home header #haut nav a svg {
+  width: 30px;
+  vertical-align: middle;
+}
+
 .home main section.banner {
   background-image: url(../images/HotPizza/bannière.jpg);
   background-repeat: no-repeat;
@@ -62,7 +67,7 @@
 .home main section.moyenssect {
   text-align: center;
   margin-bottom: 30px;
-  background-color: white;
+  background-color: black;
   line-height: 1.8;
   margin-bottom: 200px;
 }
@@ -119,5 +124,6 @@
   border: 3px solid tomato;
   border-radius: 50%;
   padding: 20px;
+  margin: 30px;
 }
 /*# sourceMappingURL=style.css.map */
