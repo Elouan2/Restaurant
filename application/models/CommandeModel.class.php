@@ -12,8 +12,8 @@ class CommandeModel {
     // WHERE B.id=?';
     const QUERY_DISPATCHER = ' SELECT *
     FROM commande AS C
-    inner join user AS U
-    on C.client_id = U.id;
+    INNER JOIN user AS U
+    ON C.client_id = U.id;
     WHERE U.role=livreur
     AND U.statut=true';
 
