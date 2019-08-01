@@ -58,13 +58,24 @@
     section.moyenssect{
       text-align: center;
       margin-bottom: 30px;
-      padding: 0 20px;
-      background-color:black;
+      // padding: 0 20px;
+      background-color:white;
       line-height: 1.8;
       margin-bottom: 200px;
+      article{
+        border: 2px solid tomato;
+        line-height: 2em;
+        width: 30%;
+        margin-top: 50px;
+        margin-bottom: 100px;
+      }
+      div.titre{
+        width:100%;
+        background-color: black;
+      }
       div{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-content: center;
         background-color: white;
         .container{
@@ -72,21 +83,18 @@
           max-width: 1100px;
           padding:30px;
           
-          article.moyensart{
-            border: 1px solid tomato;
-            line-height: 2.8;
-            width: 20%;
-
-          }
+          
         }
       }
-      h1, h2, h3, h4{
-        border: 2px solid tomato;
-        background-color: tomato;
+      h1, h2, h3{
         color: white;
         font-family: 'Lacquer', sans-serif;
         text-align: center;
-        margin-bottom: 10px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid tomato;
+        background-color: tomato;
+        
       }
       h2.avec{
         background-color: black;

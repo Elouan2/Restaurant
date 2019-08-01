@@ -62,19 +62,30 @@
 .home main section.moyenssect {
   text-align: center;
   margin-bottom: 30px;
-  padding: 0 20px;
-  background-color: black;
+  background-color: white;
   line-height: 1.8;
   margin-bottom: 200px;
+}
+
+.home main section.moyenssect article {
+  border: 2px solid tomato;
+  line-height: 2em;
+  width: 30%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.home main section.moyenssect div.titre {
+  width: 100%;
+  background-color: black;
 }
 
 .home main section.moyenssect div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-line-pack: center;
       align-content: center;
   background-color: white;
@@ -86,19 +97,14 @@
   padding: 30px;
 }
 
-.home main section.moyenssect div .container article.moyensart {
-  border: 1px solid tomato;
-  line-height: 2.8;
-  width: 20%;
-}
-
-.home main section.moyenssect h1, .home main section.moyenssect h2, .home main section.moyenssect h3, .home main section.moyenssect h4 {
-  border: 2px solid tomato;
-  background-color: tomato;
+.home main section.moyenssect h1, .home main section.moyenssect h2, .home main section.moyenssect h3 {
   color: white;
   font-family: 'Lacquer', sans-serif;
   text-align: center;
-  margin-bottom: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid tomato;
+  background-color: tomato;
 }
 
 .home main section.moyenssect h2.avec {
