@@ -14,10 +14,14 @@ class LoginController
         $user = $model -> addUser ($formFields['login']);
         $http->redirectTo("/login");
     }
-    
+
     public function httpPostMethod(Http $http, array $formFields)
     {
-        if() {
+        if (password_verify('rasmuslerdorf', $hash)) {
+    echo 'Le mot de passe est valide !';
+} else {
+    echo 'Le mot de passe est invalide.';
+}
 
         }
         $parameters_main['password']= $password;
