@@ -4,16 +4,11 @@
           box-sizing: border-box;
 }
 
-/*html{
-    font-size: 62.5%;
-}*/
-body.home {
-  text-align: center;
-  text-decoration: none;
-  background-color: black;
+* main {
+  background-color: white;
 }
 
-body.home main section.banner {
+* main section.banner {
   background-image: url(../images/HotPizza/bannière.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -21,16 +16,15 @@ body.home main section.banner {
   height: 700px;
 }
 
-body.home main section.moyenssect {
+* main section.moyenssect {
   text-align: center;
   font-family: 'Roboto Mono', monospace;
-  margin-bottom: 30px;
-  background-color: black;
+  background-color: white;
   line-height: 1.8;
   margin-bottom: 200px;
 }
 
-body.home main section.moyenssect article {
+* main section.moyenssect article {
   border: 2px solid tomato;
   line-height: 2em;
   width: 30%;
@@ -38,12 +32,7 @@ body.home main section.moyenssect article {
   margin-bottom: 100px;
 }
 
-body.home main section.moyenssect div.titre {
-  width: 100%;
-  background-color: black;
-}
-
-body.home main section.moyenssect div {
+* main section.moyenssect div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,15 +41,16 @@ body.home main section.moyenssect div {
   -ms-flex-line-pack: center;
       align-content: center;
   background-color: white;
+  width: 80%;
 }
 
-body.home main section.moyenssect div .container {
+* main section.moyenssect div .container {
   margin: 0 auto;
   max-width: 1100px;
   padding: 30px;
 }
 
-body.home main section.moyenssect h1, body.home main section.moyenssect h2, body.home main section.moyenssect h3 {
+* main section.moyenssect h1, * main section.moyenssect h2, * main section.moyenssect h3 {
   color: white;
   font-family: 'Lacquer', sans-serif;
   text-align: center;
@@ -70,13 +60,13 @@ body.home main section.moyenssect h1, body.home main section.moyenssect h2, body
   background-color: tomato;
 }
 
-body.home main section.moyenssect h2.avec {
+* main section.moyenssect h2.avec {
   background-color: black;
   width: 100%;
   border: none;
 }
 
-body.home main section.moyenssect i {
+* main section.moyenssect i {
   color: tomato;
   font-size: 60px;
   border: 3px solid tomato;
@@ -87,15 +77,5 @@ body.home main section.moyenssect i {
 
 body.register {
   background-color: white;
-}
-
-body.carte {
-  text-align: center;
-  text-decoration: none;
-  background-color: white;
-}
-
-body.carte main {
-  margin-top: 215px;
 }
 /*# sourceMappingURL=style.css.map */

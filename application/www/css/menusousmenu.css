@@ -19,9 +19,9 @@
 .carte nav > ul > li > a {
     font-weight: bold;
     text-decoration: none;
-	padding: 20px 30px;
 	color: tomato;
 	display: inline-block;
+	padding:35px 40px 20px 40px;
 }
 
 .carte nav > ul > li > a:hover {

@@ -1,0 +1,77 @@
+
+
+
+
+
+
+
+body.carte{
+    text-align: center;
+    text-decoration: none;
+    background-color:white;
+}
+.carte  main{
+    margin-top: 215px;;
+}
+
+
+
+
+
+
+.reine > div div:last-of-type, 
+.savoyarde > div div:last-of-type, 
+.barbecue> div div:last-of-type, 
+.poulet> div div:last-of-type, 
+.americanbg> div div:last-of-type,
+.saumon> div div:last-of-type,
+.marg> div div:last-of-type,
+.qfr> div div:last-of-type,
+.chevre> div div:last-of-type,
+.vege> div div:last-of-type{
+    padding: 45px;
+}
+
+.bg-showcase{
+    min-height: 455px;
+}
+
+.reine .bg-showcase{
+    background: url(../images/HotPizza/pizzas/pizza-reine.jpg) no-repeat top left / cover;
+}
+
+.savoyarde .bg-showcase{
+    background: url(../images/HotPizza/pizzas/pizza-savoyarde.jpg) no-repeat top left / cover;
+}
+
+.barbecue .bg-showcase{
+    background: url(../images/HotPizza/pizzas/pizza-barbecue.jpg) no-repeat top left / cover;
+}
+
+.poulet .bg-showcase{
+    background: url(../images/HotPizza/pizzas/pizza-poulet-bqq.jpg) no-repeat top left / cover;
+}
+
+.americanbg .bg-showcase{
+    background: url(../images/HotPizza/pizzas/pizza-american-burger.jpg) no-repeat top left / cover;
+}
+
+.saumon .bg-showcase{
+    background: url(../images/HotPizza/pizzas/pizza-saumon.jpg) no-repeat top left / cover;
+}
+
+.marg .bg-showcase{
+    background: url(../images/HotPizza/pizzas/pizza-margherita.jpg) no-repeat top left / cover;
+}
+
+.qfr .bg-showcase{
+    background: url(../images/HotPizza/pizzas/pizza-4-fromages.jpg) no-repeat top left / cover;
+}
+
+.chevre .bg-showcase{
+    background: url(../images/HotPizza/pizzas/pizza-chevre.jpg) no-repeat top left / cover;
+}
+
+.vege .bg-showcase{
+    background: url(../images/HotPizza/pizzas/pizza-vegetarienne.jpg) no-repeat top left / cover;
+}

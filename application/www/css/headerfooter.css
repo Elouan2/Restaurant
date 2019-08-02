@@ -1,7 +1,7 @@
 body{
     text-align: center;
     text-decoration: none;
-    background-color:black;
+    
 }
 
 header{
@@ -13,6 +13,7 @@ position:fixed;
 top: 0; 
 left: 0;
 right: 0;
+z-index:auto;
 }
 header img{
 width:200px;
@@ -21,6 +22,7 @@ padding: 20px;
 header nav{
 background-color: tomato;
 padding:15px;
+margin-top:10px;
 }
 
 header nav a{
