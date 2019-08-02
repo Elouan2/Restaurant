@@ -7,7 +7,7 @@ class LogoutController
         $usersession = new UserSession ();
         $usersession -> destroy();
         
-        $http -> RedirectTo('/user');		
+        $http -> RedirectTo('/');		
         return ['bodyClass' => 'home'];
     }
 }

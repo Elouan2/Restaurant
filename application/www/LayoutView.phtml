@@ -35,18 +35,33 @@
             <div id="haut">
                 <div id="haut_body">
                     <img id="logo" src=" <?= $wwwUrl ?>/images/HotPizza/logo.jpg" alt="logo">
-                    
-                    <nav class="fixed">   
+                    <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 'admin') : ?>
+                    <nav class="fixed">
                         <a href="<?= $requestUrl ?>/carte">A la Carte</a>
                         <a href=""><i class="fas fa-map-marked-alt"></i>Trouver votre pizzeria !</a>
                         <a href="#">A emporter</a>
                         <a href="#"id="livraison">Livraison</a>
                         <a href="#"><i class="fas fa-comments"></i>Nous contacter</a>
-                        <a href="<?= $requestUrl ?>/register">Se connecter <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" fill="#000000">
-                    <g id="surface39282">
-                    <path style=" stroke:none;fill-rule:nonzero;fill:#000000;fill-opacity:1;" d="M 25.015625 1.984375 C 15.4375 1.984375 7.210938 7.867188 3.765625 16.21875 C 3.472656 16.882812 3.566406 17.652344 4.003906 18.230469 C 4.441406 18.808594 5.15625 19.101562 5.875 19 C 6.589844 18.902344 7.199219 18.421875 7.460938 17.746094 C 10.308594 10.847656 17.070312 5.984375 25.015625 5.984375 C 35.535156 5.984375 44.015625 14.464844 44.015625 24.984375 C 44.015625 35.5 35.535156 43.984375 25.015625 43.984375 C 17.074219 43.984375 10.308594 39.117188 7.460938 32.21875 C 7.199219 31.546875 6.589844 31.066406 5.875 30.964844 C 5.15625 30.863281 4.441406 31.160156 4.003906 31.738281 C 3.566406 32.3125 3.472656 33.082031 3.765625 33.746094 C 7.210938 42.101562 15.4375 47.984375 25.015625 47.984375 C 37.695312 47.984375 48.015625 37.660156 48.015625 24.984375 C 48.015625 12.304688 37.695312 1.984375 25.015625 1.984375 Z M 26.964844 15.964844 C 26.148438 15.964844 25.417969 16.457031 25.109375 17.210938 C 24.804688 17.964844 24.984375 18.828125 25.566406 19.394531 L 29.15625 22.984375 L 3.984375 22.984375 C 3.261719 22.972656 2.589844 23.351562 2.226562 23.972656 C 1.863281 24.597656 1.863281 25.367188 2.226562 25.992188 C 2.589844 26.613281 3.261719 26.992188 3.984375 26.984375 L 29.15625 26.984375 L 25.566406 30.566406 C 25.046875 31.070312 24.835938 31.816406 25.019531 32.515625 C 25.199219 33.214844 25.75 33.765625 26.449219 33.945312 C 27.148438 34.128906 27.894531 33.917969 28.394531 33.394531 L 35.394531 26.394531 C 36.175781 25.617188 36.175781 24.347656 35.394531 23.566406 L 28.394531 16.566406 C 28.019531 16.179688 27.503906 15.964844 26.964844 15.964844 Z M 26.964844 15.964844 "/>
-                    </g>
-                    </svg></a>
+                        <?php if (!isset($_SESSION['user'])) : ?>
+                        <a href="<?= $requestUrl ?>/register">Se connecter</a>
+                    <?php else : ?>
+                    <a id="deconnexion" href="<?= $requestUrl ?>/logout">Déconnexion (<?= $_SESSION['user']['firstName'] ?>)
+                    </a>
+                    <?php endif ?>
+                    </nav>
+                    <?php else : ?>
+                    <nav class="fixed">
+                        <a href="<?= $requestUrl ?>/carte">A la Carte</a>
+                        <a href=""><i class="fas fa-map-marked-alt"></i>Trouver votre pizzeria !</a>
+                        <a href="#">A emporter</a>
+                        <a href="#"id="livraison">Livraison</a>
+                        <a href="#"><i class="fas fa-comments"></i>Nous contacter</a>
+                    <?php if (!isset($_SESSION['user'])) : ?>
+                        <a href="<?= $requestUrl ?>/register">Se connecter</a>
+                    <?php else : ?>
+                    <a id="deconnexion" href="<?= $requestUrl ?>/logout">Déconnexion (<?= $_SESSION['user']['firstName'] ?>)</a>
+                    <?php endif ?>
+                    <?php endif ?>
                     </nav>
                 </div>
             </div>
@@ -56,3 +71,5 @@
         </main>
     </body>
 </html>
+
+
