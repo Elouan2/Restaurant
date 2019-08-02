@@ -10,8 +10,11 @@ body.carte{
     text-decoration: none;
     background-color:white;
 }
+body.carte #haut{
+    position : static;
+}
 .carte  main{
-    margin-top: 215px;;
+margin-top: -20px;
 }
 
 
@@ -33,7 +36,7 @@ body.carte{
 }
 
 .bg-showcase{
-    min-height: 455px;
+    min-height: 300px;
 }
 
 .reine .bg-showcase{
@@ -42,6 +45,7 @@ body.carte{
 
 .savoyarde .bg-showcase{
     background: url(../images/HotPizza/pizzas/pizza-savoyarde.jpg) no-repeat top left / cover;
+    background-position: center center;
 }
 
 .barbecue .bg-showcase{
@@ -53,7 +57,7 @@ body.carte{
 }
 
 .americanbg .bg-showcase{
-    background: url(../images/HotPizza/pizzas/pizza-american-burger.jpg) no-repeat top left / cover;
+    background: url(../images/HotPizza/pizzas/pizza-american-burger.jpg) no-repeat top left/ cover;
 }
 
 .saumon .bg-showcase{

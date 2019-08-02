@@ -23,6 +23,7 @@ header nav{
 background-color: tomato;
 padding:25px;
 margin-top:10px;
+display: inline-block;
 }
 
 header nav a{

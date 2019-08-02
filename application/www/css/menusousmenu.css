@@ -1,7 +1,15 @@
-.carte nav {
+.carte main{
+	margin-bottom: 226px;
+}
+
+
+.carte nav.menuderoulant {
     border-bottom: 4px solid brown;
-    text-align: center;
-    
+	text-align: center;
+	display:block;
+	 
+	z-index: 4;
+;
 }
 
 .carte nav ul {
@@ -32,9 +40,10 @@
 .carte nav .menu {
 	display: none;
 	position: absolute;
+	z-index: 4;
 	background: tomato;
 	left: 0;
-    right: 0;
+	right: 0;
 }
 
 
