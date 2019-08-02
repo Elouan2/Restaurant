@@ -1,14 +1,15 @@
 <?php
 
-class IngredientModel {
+class IngredientModel
+{
     const QUERY_ADDINGREDIENT = 'SELECT *
     FROM ingredient
     WHERE 1';
     
     const QUERY_DISPATCHER = ' SELECT *
     FROM commande AS C
-    inner join user AS U
-    on C.client_id = U.id;
+    INNER JOIN user AS U
+    ON C.client_id = U.id;
     WHERE U.role=steed
     AND U.statut=true';
 
@@ -17,6 +18,7 @@ class IngredientModel {
     protected $price;
     protected $date_order;
     protected $statut;
+
     public function findAll(PDO $dataBase){
         $query= $dataBase->prepare(QUERY_DISPLAYCOMMANDE);
         $error = $query->execute();
@@ -27,13 +29,6 @@ class IngredientModel {
     public function find(PDO $dataBase, int $id){
         $query= $dataBase->prepare(QUERY_DISPLAYSINGLECOMMANDE);
         $error = $query->execute([$id]);
-        $result = $query -> fetchAll();
-        return $result;
-    }
-
-    public function findAll(PDO $dataBase){
-        $query= $dataBase->prepare(QUERY_DISPATCHER);
-        $error = $query->execute();
         $result = $query -> fetchAll();
         return $result;
     }
