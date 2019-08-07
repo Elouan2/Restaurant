@@ -1,55 +1,55 @@
-
-
+<h2><i class="fa fa-fire"></i>Gestion des éléménts</h2>
 <form class="generic-form" action="#" method="POST" enctype="multipart/form-data">
-    <fieldset>
-    <legend>Ajout élément</legend>
-    <ul>
-        <li>
-            <label for="name">Nom :</label>
-            <input type="text" name="name">
-        </li>
-        <li>
-            <label for="type">Type :</label>
-            <select name="type" id="type">
-                <option value="starter">Entrée</option>
-                <option value="dessert">Dessert</option>
-                <option value="drink">Boisson</option>
-            </select>
-        </li>
-        <li>
-            <label for="price">Prix unitaire :</label>
-            <input type="text" name="price">
-        </li>
-        <li>
-            <label for="image">Image :</label>
-            <input type="file" name="image">
-        </li>
-        <li>
-            <button type="submit" value="Valider">Valider</button>
-            <button type="reset" value="Effacer">Effacer</button>
-        </li>
-    </ul>
+	<fieldset>
+		<legend>Ajout élément</legend>
+		<ul>
+			<li>
+				<label for="name" >Nom:</label>
+				<input type="text" name="name" id="name">
+			</li>
+			<li>
+				<label for="type">Type:</label>
+				<select name="type"  id="type">
+					<option value="starter">Entrée</option>
+					<option value="dessert">Dessert</option>
+					<option value="drink">Boisson</option>
+				</select>
+			</li>
+			<li>
+				<label for="price">Prix unitaire:</label>
+				<input type="text"  name="price"  id="price">
+			</li>
+			<li>
+				<label for="image">Image:</label>
+				<input type="file" name="image" id="image">
+			</li>
+			<li>
+				<button type="submit" name="valider">valider</button>
+				<button type="reset" name="Effacer">Effacer</button>
+			</li>
+​
+		</ul>
+	</fieldset>
 </form>
-
-    <fieldset>
-        <legend>Liste des éléments</legend>
-        <table class="generic-table">
-            <thead><th>Nom</th><th>Type</th><th>Prix</th><th>Image</th></thead>
-        <tfoot></tfoot>
-        <tbody>
-            <?php foreach($elements as $element) : ?>
-                <tr>
-                
-                    <td><?= $element['name'] ?></td>
-                    <td><?= $element['type'] ?></td>
-                    <td><?= $element['price'] ?></td>
-                    <td><img src="<?= $wwwUrl.'/images/elements/'.$element['image'] ?>"></td>
-                    <!-- <td><input type="checkbox" name="id[]" value=""></td> -->
-                    <td><a href="<?= $requestUrl ?>/admin/element?id=<?= $element['id'] ?>">Effacer</td>
-                    <td><a href="#" id="edit" data-id="<?= $element['id'] ?>">Editer</td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-        </table>
-    </fieldset>
-    <script> src="<?= $wwwUrl ?>/js/element.js"></script>
+​
+<fieldset>
+	<legend>Liste des éléménts</legend>
+	<table class="generic-table">
+		<thead><th>Nom</th><th>Type</th><th>Prix</th><th>image</th><th></th><th></th></thead>
+		<tfoot></tfoot>
+		<tbody>
+			<?php foreach ($elements as $element):?>
+				<tr>
+					<td><?=$element['name']?></td>
+					<td><?=$element['type']?></td>
+					<td><?=$element['price']?></td>
+					<td><img src="<?=$wwwUrl.'/images/elements/'.$element['image']?>"></td>
+					<td><a href="<?=$requestUrl?>/admin/element?id=<?=$element['id']?>"><i class="fa fa-trash"></i></a></td>
+					<td><a href="#" id="edit" data-id="<?=$element['id']?>"><i class="fa fa-edit"></i></a></td>
+				</tr>
+			<?php endforeach;?>
+​
+		</tbody>
+	</table>
+</fieldset>
+<script src="<?=$wwwUrl ?>/js/element.js"></script>
