@@ -46,9 +46,10 @@
                     <td><img src="<?= $wwwUrl.'/images/elements/'.$element['image'] ?>"></td>
                     <!-- <td><input type="checkbox" name="id[]" value=""></td> -->
                     <td><a href="<?= $requestUrl ?>/admin/element?id=<?= $element['id'] ?>">Effacer</td>
-                    <td><a href="#">Editer</td>
+                    <td><a href="#" id="edit" data-id="<?= $element['id'] ?>">Editer</td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
         </table>
     </fieldset>
+    <script> src="<?= $wwwUrl ?>/js/element.js"></script>
