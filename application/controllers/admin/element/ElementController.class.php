@@ -12,19 +12,22 @@ class ElementController
             $elementModel->removeElement($queryFields['id']);
             $http->redirectTo('/admin/element');
         }
+
         
         $elements = $elementModel->findAll();
 
-        return
+        return 
         [
             'bodyClass' => 'register',
-            'elements' => $elements
+            'elements'  =>  $elements
         ];
     }
 
     public function httpPostMethod(Http $http, array $formFields)
     {
-        if(!isset($formFiels['id'])
+         $elementModel = new ElementModel(new Database());
+
+        if( !isset($formFields['id']))
         {
             // le mode ajout
             if($http->hasUploadedFile('image') == true)
@@ -35,53 +38,47 @@ class ElementController
             {
                 $image = 'no-image.png';
             }
-        }
 
-        $elementModel = new ElementModel(new DataBase());
+            $elementModel->addElement
+            (
+                $formFields['name'],
+                $formFields['type'],
+                $formFields['price'],
+                $image
+            );
 
-        $elementModel->addElement
-        (
-            $formFields['name'],
-            $formFields['type'],
-            $formFields['price'],
-            $image
-        );
-        
-    }
-
-        $elements = $elementModel->findAll();
-
-        return
-        [
-            'bodyClass' => 'register',
-            'elements' => $elements
-        ];
-    }
-        else
-        {
-            // Le mode modification
+       }
+       else
+       {
+        // le mode modification
             if($http->hasUploadedFile('image') == true)
             {
                 $image = $http->moveUploadedFile('image','/images/elements');
             }
             else
             {
-                $element = $elementModel->find($foormFields['id']);
-                $image = $element;
+                $element = $elementModel->find($formFields['id']);
+                $image = $element['image'];
             }
-        }
 
-        $elementModel = new ElementModel(new DataBase());
+            $elementModel->updateElement
+            (
+                $formFields['id'],
+                $formFields['name'],
+                $formFields['type'],
+                $formFields['price'],
+                $image
+            );
 
-        $elementModel->addElement
-        (
-            $formFields['name'],
-            $formFields['type'],
-            $formFields['price'],
-            $image
-        );
+
+       }
         
-    }
 
-        }
+        $elements = $elementModel->findAll();
+        return 
+        [
+            'bodyClass' => 'register',
+             'elements'  =>  $elements
+        ];
+    }
 }
