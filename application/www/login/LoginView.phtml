@@ -1,28 +1,23 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <h1>Connexion</h1>
-    </header>
-
-    <main>
-    <section>
-        <form action="" method="POST">
+<section>
+<h1>Se connecter avec votre compte</h1>
+<form action="" method="POST">
+    <aside id="error">
+        <?= $errorMessage ?>
+    </aside>
+    <ul>
+        <li>
             <label for="login">Pseudo :</label>
-            <input type="text" name="login">
-            <br>
+            <input type="text" name="login" value="<?= $login ?>">
+            </li>
+        <li>
             <label for="password">Mot de passe :</label>
-            <input type="text" name="password">
-            <input type="hidden" name="case" value="create-user">
+            <input type="password" name="password">
+        </li>
+        <li>   
             <input id="valider" type="submit" value="Valider">
-        </form>
-    </section>
-  </main>
-</body>
-</html>
+            <a href="<?= $requestUrl ?>/register">S'inscrire</a>
+        </li>
+
+    </ul>
+</form>
+</section>

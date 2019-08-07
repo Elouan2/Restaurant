@@ -57,7 +57,7 @@
                         <a href="#"id="livraison">Livraison</a>
                         <a href="#"><i class="fas fa-comments"></i>Nous contacter</a>
                     <?php if (!isset($_SESSION['user'])) : ?>
-                        <a href="<?= $requestUrl ?>/register">Se connecter</a>
+                        <a href="<?= $requestUrl ?>/login">Se connecter</a>
                     <?php else : ?>
                     <a id="deconnexion" href="<?= $requestUrl ?>/logout">Déconnexion (<?= $_SESSION['user']['firstName'] ?>)</a>
                     <?php endif ?>
