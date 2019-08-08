@@ -1,44 +1,19 @@
 <?php
-class CommandeModel {
-    const QUERY_DISPLAYCOMMANDE = 'SELECT *
-    FROM commande
-    WHERE 1';
-    // const QUERY_DISPLAYSINGLECOMMANDE=' SELECT *
-    // FROM user AS U
-    // INNER JOIN commande AS C
-    // ON B.auteur = U.id
-    // LEFT JOIN commentaires AS C
-    // ON B.id = C.lien
-    // WHERE B.id=?';
-    const QUERY_DISPATCHER = ' SELECT *
-    FROM commande AS C
-    INNER JOIN user AS U
-    ON C.client_id = U.id;
-    WHERE U.role=livreur
-    AND U.statut=true';
+class CommandeModel
+{
+    private $db;
 
-    protected $id;
-    protected $client_id;
-    protected $price;
-    protected $date_order;
-    protected $statut;
-    public function findAll(PDO $dataBase){
-        $query= $dataBase->prepare(QUERY_DISPLAYCOMMANDE);
-        $error = $query->execute();
-        $result = $query -> fetchAll();
-        return $result;
+    function __construct (Database $database)
+    {
+        $this->db = $database;
     }
-    // public function find(PDO $dataBase, int $id){
-    //     $query= $dataBase->prepare(QUERY_DISPLAYSINGLECOMMANDE);
-    //     $error = $query->execute([$id]);
-    //     $result = $query -> fetchAll();
-    //     return $result;
-    // }
-    public function findAll(PDO $dataBase){
-        $query= $dataBase->prepare(QUERY_DISPATCHER);
-        $error = $query->execute();
-        $result = $query -> fetchAll();
-        return $result;
+
+    public function findAllFormule()
+    {
+        $sql = 'SELECT * FROM formule';
+
+        $formules = $this->db->query($sql);
+
+        return $formules;
     }
 }
-?>
