@@ -4,14 +4,20 @@ class FormuleController
 {
     public function httpGetMethod(Http $http, array $queryFields)
     {
-        $commandeModel = new CommandeModel(new Database());
+        $db = new Database();
+        $commandeModel = new CommandeModel($db);
+        $ingredientModel = new IngredientModel($db);
 
         $formules = $commandeModel->findAllFormule();
+        $bases = $ingredientModel->findAllDish();
+        $ingredients = $ingredientModel->findAllIngredient();
 
         return 
         [
-            'formules'  =>  $formules,
-            'bodyClass' => 'home'
+            'formules'      =>  $formules,
+            'bodyClass'     => 'home',
+            'bases'         =>  $bases,
+            'ingredients'   =>  $ingredients
         ];
     }
 

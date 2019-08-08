@@ -36,26 +36,31 @@
                 <div id="haut_body">
                     <img id="logo" src=" <?= $wwwUrl ?>/images/HotPizza/logo.jpg" alt="logo">
                     <nav>
-                    <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 'admin') : ?>
+                    <?php if (isset($_SESSION['user'])): 
+                        if($_SESSION['user']['role'] === 'admin') : ?>
                             <a href="<?= $requestUrl ?>/admin/element">Eléments</a>
                             <a href="<?= $requestUrl ?>/admin/ingredient">Ingrédients</a>
                             <a href="<?= $requestUrl ?>/admin/user">Utilisateurs</a>
                             <a href="<?= $requestUrl ?>/admin/livraison">Livraisons</a>
-                    <?php elseif(isset($_SESSION['user']) && $_SESSION['user']['role'] === 'steed') : ?>
+                        <?php elseif(isset($_SESSION['user']) && $_SESSION['user']['role'] === 'steed') : ?>
                         <a href="<?= $requestUrl ?>/steed/livraison">Mes livraisons</a>
-                    <?php else:?>    
+                        <?php else:?>    
+                            <a href="<?= $requestUrl ?>/formule">Nos formules</a>
+                            <a href="<?= $requestUrl ?>/carte">A la Carte</a>
+                            <a href=""><i class="fas fa-map-marked-alt"></i>Trouver votre pizzeria !</a>
+                            <a href="#">A emporter</a>
+                            <a href="#"id="livraison">Livraison</a>
+                            <a href="#"><i class="fas fa-comments"></i>Nous contacter</a>
+                        <?php endif ?>
+                        <a id="deconnexion" href="<?= $requestUrl ?>/logout">Déconnexion (<?= $_SESSION['user']['firstName'] ?>)</a>
+                    <?php else : ?>
                         <a href="<?= $requestUrl ?>/formule">Nos formules</a>
                         <a href="<?= $requestUrl ?>/carte">A la Carte</a>
                         <a href=""><i class="fas fa-map-marked-alt"></i>Trouver votre pizzeria !</a>
                         <a href="#">A emporter</a>
                         <a href="#"id="livraison">Livraison</a>
                         <a href="#"><i class="fas fa-comments"></i>Nous contacter</a>
-                    <?php endif ?>
-                        
-                    <?php if (!isset($_SESSION['user'])) : ?>
                         <a href="<?= $requestUrl ?>/login">Se connecter</a>
-                    <?php else : ?>
-                        <a id="deconnexion" href="<?= $requestUrl ?>/logout">Déconnexion (<?= $_SESSION['user']['firstName'] ?>)</a>
                     <?php endif ?>
                     </nav>
                 </div>

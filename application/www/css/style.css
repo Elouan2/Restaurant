@@ -79,3 +79,25 @@ body.register {
   background-color: white;
 }
 /*# sourceMappingURL=style.css.map */
+.repas
+{
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+  border-radius: 10%
+}
+#dish
+{
+  width: 500px;
+  height: 600px;
+  overflow-y: scroll;
+}
+.dishSelect
+{
+  width: 15px ;
+  height: 15px
+}
+.hide
+{
+  display: none;
+}

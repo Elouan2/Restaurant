@@ -15,5 +15,5 @@ class CommandeModel
         $formules = $this->db->query($sql);
 
         return $formules;
-    }    
+    }
 }
