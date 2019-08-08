@@ -1,9 +1,8 @@
-<?php 
-    class LoginForm extends Form
-{
-    function build()
-    {
-        $this->addFormField("login");
-    }
-}
-?>
+<?php
+	class LoginForm extends Form
+	{
+		public function build()
+		{
+			$this->addFormField("login");
+		}
+	}

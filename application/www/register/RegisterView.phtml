@@ -1,31 +1,33 @@
 <section>
     <h2>S'inscrire</h2>
-    <form action="" method="POST">
-    <aside id="error">
-        <?= $errorMessage ?>
-    </aside>
-        <ul>
-            <li>
-                <label for="firstName">Prénom :</label>
-                <input type="text" name="firstName" required value="<?= $firstName ?>">
-            </li>
-            <li>
-                <label for="lastName">Nom :</label>
-                <input type="text" name="lastName" required value="<?= $lastName ?>">
-            </li>
-            <li>
-                <label for="login">Pseudo :</label>
-                <input type="text" name="login" value="<?= $login ?>">
-            </li>
-                <label for="password">Mot de passe :</label>
-                <input type="password" name="password" required>
-            <li>
-                <label for="mail">E-mail :</label>
-                <input type="email" name="mail" required value="<?= $mail ?>">
-            </li>
-            <li>
-                <input id="valider" type="submit" value="Valider">
-                <input id="reset" type="reset" value="Effacer">
-            </li>
+        <form action="" method="POST">
+            <aside id="error">
+                <?= $errorMessage ?>
+            </aside>
+            <ul>
+                <li>    
+                    <label for="firstName">Prénom :</label>
+                    <input type="text" name="firstName" required value="<?= $firstName?>">
+                </li>
+                <li>
+                    <label for="lastName">Nom :</label>
+                    <input type="text" name="lastName" required value="<?= $lastName?>">
+                </li>
+                <ul>
+                    <label for="login">Pseudo :</label>
+                    <input type="text" name="login" required value="<?= $login?>">
+                </li>
+                <li>
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" name="password" required>
+                </li>
+                <li>
+                    <label for="mail">E-mail :</label>
+                    <input type="email" name="mail" required value="<?= $mail?>">
+                </li>
+                <li>
+                    <input id="valider" type="submit" value="Valider">
+                    <input id="reset" type="reset" value="Effacer">
+                </li>
         </form>
     </section>

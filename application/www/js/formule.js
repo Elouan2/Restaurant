@@ -1,1 +1,6 @@
-$formule
+$(function()
+{
+	
+   
+   
+}); 

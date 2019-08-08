@@ -27,7 +27,7 @@
 }
 .generic-table th
 {
-    text-align: left;
+    /*text-align: left;*/
 }
 .generic-table td,
 .generic-table th

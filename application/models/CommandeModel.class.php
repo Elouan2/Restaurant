@@ -10,10 +10,10 @@ class CommandeModel
 
     public function findAllFormule()
     {
-        $sql = 'SELECT * FROM formule';
+        $sql = "SELECT * FROM formule";
 
         $formules = $this->db->query($sql);
 
         return $formules;
-    }
+    }    
 }

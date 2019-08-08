@@ -4,38 +4,42 @@ class LoginController
 { 
     public function httpGetMethod(Http $http, array $queryFields) 
     {
-        return ['bodyClass' => 'home', '_form' => new LoginForm()];
+        return
+        [
+            'bodyClass' => 'home',
+            '_form'     =>  new LoginForm()
+        ];
     }
 
     public function httpPostMethod(Http $http, array $formFields)
     {
         try
         {
-		    $model = new UserModel (new Database());
-            $user = $model -> findUserByLogin ($formFields['login']);
+        	$model = new UserModel (new Database());
+    		$user = $model -> findUserByLogin ($formFields['login']);
+            
             if(empty($user))
             {
-                throw new Eception("Il n'y a pas d'utilisateur avec ce login");
+                 throw new Exception("Il n'y a pas d'utilisateur avec le login spécifié!");
             }
             elseif (password_verify($formFields['password'], $user['password']))
             {
-			    $session = new UserSession();
+    			$session = new UserSession();
                 $session->create($user['id'], $user['firstName'], $user['lastName'], $user['mail'], $user['role']);
-        
+                
                 if ($user['role']=='client')
                 {
-				    $http->RedirectTo('/carte');
-			    }
+                    $http->RedirectTo('/carte');
+    			}
                 else
                 {
-				    $http->RedirectTo('/admin');
-		    	}
+                    $http->RedirectTo('/admin');
+                }
             }
             else
             {
-                throw new Exception("Le mot de passe n'est pas correct");
-                
-            }
+    			throw new Exception("Le mot de passe spécifié est incorrect!"); 
+    		}		
         }
         catch(Exception $e)
         {
@@ -44,7 +48,13 @@ class LoginController
 
             $form->setErrorMessage($e->getMessage());
 
-            return ['bodyClass' => 'home', '_form' => $form];
+            return
+            [
+                'bodyClass' => 'home',
+                '_form'     =>  $form
+            ]; 
+
         }
+
     }
 }

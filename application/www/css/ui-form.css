@@ -45,7 +45,8 @@
 }
 .generic-form input[type="password"],
 .generic-form input[type="text"],
-.generic-form textarea
+.generic-form textarea,
+.generic-form select
 {
     width: 20em;
 }

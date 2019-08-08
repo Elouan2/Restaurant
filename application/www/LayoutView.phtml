@@ -37,10 +37,10 @@
                     <img id="logo" src=" <?= $wwwUrl ?>/images/HotPizza/logo.jpg" alt="logo">
                     <nav>
                     <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 'admin') : ?>
-                        <a href="<?= $requestUrl ?>/admin/element">Eléments</a>
-                        <a href="<?= $requestUrl ?>/admin/ingredient">Ingrédients</a>
-                        <a href="<?= $requestUrl ?>/admin/user">Utilisateurs</a>
-                        <a href="<?= $requestUrl ?>/admin/livraison">Livraisons</a>
+                            <a href="<?= $requestUrl ?>/admin/element">Eléments</a>
+                            <a href="<?= $requestUrl ?>/admin/ingredient">Ingrédients</a>
+                            <a href="<?= $requestUrl ?>/admin/user">Utilisateurs</a>
+                            <a href="<?= $requestUrl ?>/admin/livraison">Livraisons</a>
                     <?php elseif(isset($_SESSION['user']) && $_SESSION['user']['role'] === 'steed') : ?>
                         <a href="<?= $requestUrl ?>/steed/livraison">Mes livraisons</a>
                     <?php else:?>    
@@ -64,6 +64,7 @@
         <main>    
             <?php include $this->viewData['template'] ?>
         </main>
+        <script src="<?= $wwwUrl ?>/js/main.js"></script>
     </body>
 </html>
 

@@ -18,8 +18,8 @@
     {
         $parameters['login']= $login;
 
-        $query= $this->db->queryOne(self::USER, $parameters);
-
+        $query = $this->db->queryOne(self::USER, $parameters);
+        
         return $query;
     }
 

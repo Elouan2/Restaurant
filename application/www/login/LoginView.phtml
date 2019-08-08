@@ -1,23 +1,22 @@
 <section>
-<h1>Se connecter avec votre compte</h1>
-<form action="" method="POST">
-    <aside id="error">
-        <?= $errorMessage ?>
-    </aside>
-    <ul>
-        <li>
-            <label for="login">Pseudo :</label>
-            <input type="text" name="login" value="<?= $login ?>">
+   <h1>Se connevcter avec votre compte</h1>
+    <form action="#" method="POST">
+        <aside id="error">
+            <?= $errorMessage ?>
+        </aside>
+        <ul>
+            <li>
+                <label for="login">Pseudo :</label>
+                <input type="text" name="login" value="<?= $login ?>">
             </li>
-        <li>
-            <label for="password">Mot de passe :</label>
-            <input type="password" name="password">
-        </li>
-        <li>   
-            <input id="valider" type="submit" value="Valider">
-            <a href="<?= $requestUrl ?>/register">S'inscrire</a>
-        </li>
-
-    </ul>
-</form>
+            <li>
+                <label for="password">Mot de passe :</label>
+                <input type="password" name="password">
+            </li>
+            <li>
+                <input id="valider" type="submit" value="Valider">
+                <a href="<?= $requestUrl ?>/register"> S'inscrire </a>
+            </li>
+        </ul>
+    </form>
 </section>
